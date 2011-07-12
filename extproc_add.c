@@ -9,8 +9,7 @@
 value* caml_add_two = NULL;
 
 int add_two(int x, int y) {
-  /* if the shared lib has been unloaded, or is being loaded for the first
-     time, call the OCaml initialization */
+  /* if the shared lib is being loaded for the first time, call the OCaml initialization */
   if (caml_add_two == NULL) {
     caml_startup(NULL); /* no argv */
     caml_add_two = caml_named_value("caml_add_two");
