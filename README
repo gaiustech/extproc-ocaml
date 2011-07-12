@@ -1,8 +1,4 @@
 Sample code for implementing an Oracle EXTPROC in OCaml.
 
-Compile with:
 
-$ ocamlc -output-obj -o caml_extproc_add.o extproc_add.ml
-$ gcc -o c_extproc_add.o -I/usr/lib/ocaml -c extproc_add.c
-$ gcc -shared -o libextproc_add.so c_extproc_add.o caml_extproc_add.o 
-$ gcc test.c -o test -L. -lextproc_add -L`ocamlopt -where` -ldl -lcamlrun -lcurses -lm
+
